@@ -20,12 +20,14 @@ public class Character {
         this.strength = s;
         this.dexterity = d;
         this.intelligence = i;
-        this.maxLife = dice.roll()*4;
+        this.maxLife = 300;
         this.currentLife = this.maxLife;
     }
-
+    
+    //
     public int attack() {
-        return dice.roll()+this.strength;
+        
+        return dice.roll() * this.strength;
     }
 
     public void wound(int damage) {
@@ -33,7 +35,7 @@ public class Character {
     }
     
     public void heal(int heal) {
-        if(this.currentLife + heal <= this.maxLife){
+     if(this.currentLife + heal <= this.maxLife){
             this.currentLife += heal;
         }
         else{
