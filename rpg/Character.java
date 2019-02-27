@@ -6,7 +6,7 @@
 package rpg;
 
 public class Character {
-    static Dice dice = new Dice();
+    Dice dice = new Dice();
 
     private String name;
     private int strength;
